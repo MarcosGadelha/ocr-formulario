@@ -1,0 +1,249 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.section {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Captura de Imagem */
+.image-capture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#imageInput {
+    display: none;
+}
+
+.capture-btn {
+    display: inline-block;
+    background: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.capture-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+.image-preview {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.help-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Botões */
+.form-actions {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #45a049;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #f44336;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #d32f2f;
+}
+
+/* Status e Loading */
+.ocr-status,
+.submit-status {
+    text-align: center;
+    padding: 15px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #f5c6cb;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        margin-bottom: 10px;
+    }
+}
