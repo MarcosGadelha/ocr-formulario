@@ -10,7 +10,7 @@ class OCRFormProcessor {
 
     async sendToGoogleSheets(data) {
         // 🔥 AQUI É ONDE VOCÊ PRECISA COLAR SUA URL 🔥
-        const SCRIPT_URL = 'COLE_AQUI_A_URL_DO_SEU_GOOGLE_APPS_SCRIPT';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcHGHjyglfppRDh3INzI-qnDBr_0A34rW6aqcJdj5tY3BanFjDx6ZNpBDxJHG9R-k/exec';
         
         try {
             console.log('Enviando dados para Google Sheets:', data);
